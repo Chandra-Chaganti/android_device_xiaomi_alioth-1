@@ -18,10 +18,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2400
-TARGET_SCREEN_WIDTH := 1080
-
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/camera/camera_cnf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_cnf.txt
@@ -32,7 +28,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-aosp
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 30
